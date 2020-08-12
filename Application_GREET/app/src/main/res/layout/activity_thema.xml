@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="create.SelectThemeActivity">
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/image"/>
+    <TextView
+        android:id="@+id/txt_company"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="d"
+        android:textSize="0dp" />
+
+    <TextView
+        android:id="@+id/txt_job"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="d"
+        android:textSize="0dp" />
+
+    <TextView
+        android:id="@+id/txt_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="d"
+        android:textSize="0dp" />
+
+    <TextView
+        android:id="@+id/txt_tel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="d"
+        android:textSize="0dp" />
+
+    <TextView
+        android:id="@+id/txt_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="d"
+        android:textSize="0dp" />
+
+    <TextView
+        android:id="@+id/txt_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="d"
+        android:textSize="0dp" />
+
+
+
+    <com.viewpagerindicator.UnderlinePageIndicator
+        android:id="@+id/underline"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginTop="200dp"
+        android:background="#20f00000"
+        app:selectedColor="#70F00000"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/capture_layout"
+            android:orientation="vertical"
+            android:background="#DCBE24"
+            >
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="#FFFFFF" />
+
+    </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="확인"
+            android:layout_gravity="center"
+            />
+
+
+
+
+</LinearLayout>

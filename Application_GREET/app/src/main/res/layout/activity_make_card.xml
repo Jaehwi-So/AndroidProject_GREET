@@ -15,7 +15,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="50dp"
         android:text="명함에 들어갈 당신의\n\n     정보를 입력해주세요"
-        android:textSize="20dp" />-->
+        android:textSize="20dp" />
+        -->
 
 
     <LinearLayout

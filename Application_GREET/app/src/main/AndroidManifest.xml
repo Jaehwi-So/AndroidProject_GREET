@@ -16,7 +16,8 @@
         <activity android:name="taglistother.ShowDetailActivity"></activity>
         <activity android:name="taglistother.ShowListActivity"></activity>
         <activity android:name="create.SelectThemeActivity" />
-        <activity android:name="create.MakeCardActivity" />
+        <activity android:name="create.MakeCardActivity"
+                  android:windowSoftInputMode="adjustUnspecified"/>
         <activity android:name="main.LoadingActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

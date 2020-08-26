@@ -57,17 +57,17 @@
 
 
 - ## Andoroid
-<img src="/img_readme/project_analyze.jpg" width="600" height="300"></img>
+<img src="/img_readme/project_analyze.png" width="600" height="300"></img>
 
 - ## Server API
-<img src="/img_readme/project_analyze2.jpg" width="400" height="300"></img>
+<img src="/img_readme/project_analyze2.png" width="400" height="300"></img>
 
 ----------------
 
 ## 4. 사용 사례
-<img src="/img_readme/project_run1.jpg" width="600" height="300"></img>
-<img src="/img_readme/project_run2.jpg" width="600" height="300"></img>
-<img src="/img_readme/project_run3.jpg" width="600" height="300"></img>
+<img src="/img_readme/project_run1.png" width="600" height="300"></img>
+<img src="/img_readme/project_run2.png" width="600" height="300"></img>
+<img src="/img_readme/project_run3.png" width="600" height="300"></img>
 
 -------------
 

@@ -66,12 +66,12 @@
 <img src="/img_readme/project_analyze.png" width="600" height="300"></img>
 
 - ## API 서버
-### (구)JSP 서버
-<img src="/img_readme/project_analyze2.png" width="400" height="300"></img>
+### (구)JSP 서버     
+<img src="/img_readme/project_analyze2.png" width="400" height="300"></img>    
 JSP를 이용하여 간단하게 서버를 구축하였지만 성능 향상과 유지보수를 위해 RESTful API 서버를 재구축하였다.
 
-### (20200901 update)RESTful API 서버
-<img src="/img_readme/project_analyze3.png" width="600" height="300"></img>
+### (20200901 update)RESTful API 서버    
+<img src="/img_readme/project_analyze3.png" width="600" height="300"></img>    
 RESTful API 서버를 구축하여 CURD 연산에 대한 안드로이드 측에서 API 사용법이 간단해졌으며    
 Json 포멧 타입의 교환으로 성능과 호환성을 증가시켰다.
 

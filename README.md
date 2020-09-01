@@ -78,13 +78,13 @@ Json 포멧 타입의 교환으로 성능과 호환성을 증가시켰다.
 ----------------
 
 ## 4. 사용 사례
-<img src="/img_readme/project_ex1.png" width="700" height="300"></img>
-<img src="/img_readme/project_ex2.png" width="700" height="300"></img>
-<img src="/img_readme/project_ex3.png" width="700" height="300"></img>
-<img src="/img_readme/project_ex4.png" width="700" height="300"></img>
-<img src="/img_readme/project_ex5.png" width="700" height="300"></img>
-<img src="/img_readme/project_ex6.png" width="700" height="300"></img>
-<img src="/img_readme/project_ex7.png" width="700" height="300"></img>
+<img src="/img_readme/project_ex1.png" width="700" height="350"></img>
+<img src="/img_readme/project_ex2.png" width="700" height="350"></img>
+<img src="/img_readme/project_ex3.png" width="700" height="350"></img>
+<img src="/img_readme/project_ex4.png" width="700" height="350"></img>
+<img src="/img_readme/project_ex5.png" width="700" height="350"></img>
+<img src="/img_readme/project_ex6.png" width="700" height="350"></img>
+<img src="/img_readme/project_ex7.png" width="700" height="350"></img>
 
 -------------
 

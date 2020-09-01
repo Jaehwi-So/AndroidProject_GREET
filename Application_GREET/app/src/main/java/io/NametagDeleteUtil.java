@@ -30,9 +30,8 @@ public class NametagDeleteUtil {
 
     public String delete_database(String key) {
         String result = "fail";
-        String key_param = "key=" + key;
         try {
-            result = new LoadTask().execute(key_param, Util.TYPE_DELETE).get();
+            result = new LoadTask().execute(key).get();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -42,30 +41,22 @@ public class NametagDeleteUtil {
 
     class LoadTask extends AsyncTask<String, Void, String>{
 
-        String ip = Util.IP; //서버의 ip
         String sendMsg, receiveMsg;
-        String serverip = Util.SERVER_IP; //연결할 서버의 주소
+        String serverip = Util.SERVER_URL; //연결할 서버의 주소
 
 
         @Override
         protected String doInBackground(String... strings) {
             String result = "fail";
+            String url_path = serverip + "/" + strings[0];
             try {
 
                 String str = "";
-                URL url = new URL( serverip );
+                URL url = new URL( url_path );
 
                 //서버 연결
                 HttpURLConnection conn = (HttpURLConnection)url.openConnection();
-                conn.setRequestMethod("POST");
-                OutputStreamWriter osw = new OutputStreamWriter( conn.getOutputStream() );
-
-                //List.jsp?id=aa&pwd=1111&type=type_regi
-                sendMsg = strings[0] + "&type=" + strings[1];
-
-                //서버로 파라미터 전달
-                osw.write(sendMsg);
-                osw.flush();
+                conn.setRequestMethod("DELETE");
 
                 //전송이 완료되면 서버에서 처리한 결과값을 받는다
                 if( conn.getResponseCode() == conn.HTTP_OK ){
@@ -89,6 +80,7 @@ public class NametagDeleteUtil {
             }catch (Exception e){
                 e.printStackTrace();
             }
+            Log.e("del", result);
             return result;
         }
         @Override

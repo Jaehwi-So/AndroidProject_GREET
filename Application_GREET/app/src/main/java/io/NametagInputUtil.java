@@ -1,16 +1,32 @@
 package io;
 
+import android.os.AsyncTask;
+import android.util.Log;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.ProtocolException;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
 
 import util.Util;
 
 //  NametagInputUtil.getDBinputUtil().input_database(keyname, img_path);    //사용예제(키값, 이미지 uri에서 ImagePath로 변경된값)
 // img_path = getImagePathToUri(); //이미지의 URI를 얻어 경로값으로 반환된 값
-public class NametagInputUtil {
+public class NametagInputUtil{
 
     //싱글턴 생성
     static NametagInputUtil DBinput = null;
@@ -23,8 +39,8 @@ public class NametagInputUtil {
     }
     public void input_database(String name, String img_path){
         String key = name;
-        String param = "?key=" + key + "&type=" + Util.TYPE_SUBMIT;
-        DoFileUpload(Util.SERVER_IP, img_path, param);
+        String param = "?key=" + key;
+        DoFileUpload(Util.SERVER_URL, img_path, param);
     }
 
     public void DoFileUpload(String apiUrl, String absolutePath, String param) {
@@ -53,7 +69,7 @@ public class NametagInputUtil {
             // write data
             DataOutputStream dos = new DataOutputStream(conn.getOutputStream());
             dos.writeBytes(twoHyphens + boundary + lineEnd);
-            dos.writeBytes("Content-Disposition: form-data; name=\"uploadedfile\";filename=\"" + fileName + "\"" + lineEnd);
+            dos.writeBytes("Content-Disposition: form-data; name=\"upload\";filename=\"" + fileName + "\"" + lineEnd);
             dos.writeBytes(lineEnd);
 
             int bytesAvailable = mFileInputStream.available();

@@ -24,6 +24,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import io.NametagOutputUtil;
+import util.Util;
 
 public class SaveTagActivity extends AppCompatActivity {
 
@@ -61,8 +62,8 @@ public class SaveTagActivity extends AppCompatActivity {
                             break out;
                         }
                     }
-                    String param = "key=" + et_tag_key.getText().toString();
-                    Map<String, String> resultMap = NametagOutputUtil.getDBoutputUtil().output_database(param);
+                    String key = et_tag_key.getText().toString();
+                    Map<String, String> resultMap = NametagOutputUtil.getDBoutputUtil().output_database(key);
                     String res = resultMap.get("result");
                     String res_key = resultMap.get("key");
                     String res_image = resultMap.get("image");

@@ -2,6 +2,7 @@ package io;
 
 import android.content.Context;
 import android.os.AsyncTask;
+import android.util.Log;
 import android.widget.Toast;
 
 import org.json.JSONObject;
@@ -17,7 +18,7 @@ import java.util.concurrent.ExecutionException;
 
 import util.Util;
 
-//Map<String,String> map = NametagOutputUtil.getDBoutputUtil().output_database(param);
+//Map<String,String> map = NametagOutputUtil.getDBoutputUtil().output_database(key);
 public class NametagOutputUtil {
     //싱글턴 생성
     static NametagOutputUtil DBoutput = null;
@@ -29,11 +30,11 @@ public class NametagOutputUtil {
         return DBoutput;
     }
 
-    public Map<String, String> output_database(String result) {
+    public Map<String, String> output_database(String key) {
         Map<String, String> resultMap = new HashMap<>();
         resultMap.put("result",  "error");
         try {
-            resultMap = new LoadTask().execute(result, Util.TYPE_LOAD).get();
+            resultMap = new LoadTask().execute(key).get();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -45,28 +46,20 @@ public class NametagOutputUtil {
 
         String ip = Util.IP; //서버의 ip
         String sendMsg, receiveMsg;
-        String serverip = Util.SERVER_IP; //연결할 서버의 주소
+        String serverip = Util.SERVER_URL; //연결할 서버의 주소
 
 
         @Override
         protected Map<String, String> doInBackground(String... strings) {
             Map<String, String> resultMap = null;
             try {
-
+                String url_server = serverip + "/" + strings[0];
                 String str = "";
-                URL url = new URL( serverip );
+                URL url = new URL( url_server );
 
                 //서버 연결
                 HttpURLConnection conn = (HttpURLConnection)url.openConnection();
-                conn.setRequestMethod("POST");
-                OutputStreamWriter osw = new OutputStreamWriter( conn.getOutputStream() );
-
-                //List.jsp?id=aa&pwd=1111&type=type_regi
-                sendMsg = strings[0] + "&type=" + strings[1];
-
-                //서버로 파라미터 전달
-                osw.write(sendMsg);
-                osw.flush();
+                conn.setRequestMethod("GET");
 
                 //전송이 완료되면 서버에서 처리한 결과값을 받는다
                 if( conn.getResponseCode() == conn.HTTP_OK ){
@@ -111,6 +104,7 @@ public class NametagOutputUtil {
                 resultMap.put("key", "error");
                 resultMap.put("image", "error");
             }
+            Log.e("output", resultMap.get("result"));
             return resultMap;
         }
 

@@ -57,17 +57,17 @@
 
 
 - ## Andoroid
-<img src="/img_readme/project_analyze.jpg" width="600" height="300"></img>
+<img src="/img_readme/project_analyze.png" width="600" height="300"></img>
 
 - ## Server API
-<img src="/img_readme/project_analyze2.jpg" width="400" height="300"></img>
+<img src="/img_readme/project_analyze2.png" width="400" height="300"></img>
 
 ----------------
 
 ## 4. 사용 사례
-<img src="/img_readme/project_run1.jpg" width="600" height="300"></img>
-<img src="/img_readme/project_run2.jpg" width="600" height="300"></img>
-<img src="/img_readme/project_run3.jpg" width="600" height="300"></img>
+<img src="/img_readme/project_run1.png" width="600" height="300"></img>
+<img src="/img_readme/project_run2.png" width="600" height="300"></img>
+<img src="/img_readme/project_run3.png" width="600" height="300"></img>
 
 -------------
 
@@ -76,6 +76,7 @@
 - 즉 이는 명함 교환이라는 본분에 충실한 어플리케이션이므로 사용자의 요구사항을 만족시켰을 것이라고 평한다.
 - Open API를 통한 타 SNS와의 연동 기능을 넣으면 더욱 원활한 소셜 네트워킹 기능을 할 수 있을 것이다.
 - 검색 Key를 대체하여 더 효율적인 명함 교환 방법을 사용한다면 사용자의 만족도가 더욱 올라가고 보안성이 높아질 것이라고 생각한다.
+- 서버를 RESTful API로 바꾸는 것이 더욱 효과적일 것이다.
 
 
 
